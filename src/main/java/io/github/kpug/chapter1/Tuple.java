@@ -1,4 +1,4 @@
-package io.github.kpug;
+package io.github.kpug.chapter1;
 
 /**
  * @author: Lawrence

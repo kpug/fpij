@@ -1,4 +1,4 @@
-package io.github.kpug;
+package io.github.kpug.chapter1;
 
 /**
  * @author: Lawrence
@@ -19,6 +19,14 @@ public class Payment {
             return new Payment(creditCard, amount + payment.amount);
         } else {
             throw new IllegalArgumentException("Cards don't match.");
+        }
+    }
+
+    public static Payment combine2(Payment payment1, Payment payment2) {
+        if(payment1.creditCard.equals(payment2.creditCard)){
+            return new Payment(payment1.creditCard, payment1.amount + payment2.amount);
+        } else {
+            throw new IllegalArgumentException("Can't combine payments to different cards");
         }
     }
 }
